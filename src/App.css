@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: aliceblue;
 }
 
@@ -20,4 +20,28 @@
   font-size: 26px;
   min-height: 10px;
   text-align: center;
+}
+
+.btn {
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgb(118, 118, 118);
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 720px) {
+  .paragraph {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
 }
