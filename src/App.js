@@ -7,7 +7,7 @@ function App() {
   const [dateOfFact, setDateOfFact] = useState([]);
 
   const generateRandomFact = () => {
-    axios.get("https://cat-fact.herokuapp.com/facts/random").then((res) => {
+    axios.get("https://cat-fact.herokuapp.com/facts").then((res) => {
       setRandomFact(res.data.text);
       setDateOfFact([res.data.createdAt, res.data.updatedAt]);
     });
@@ -32,7 +32,9 @@ function App() {
           </button>
         </>
       ) : (
-        ""
+        <div className="paragraph">
+          There was a problem. Cat facts API is not available
+        </div>
       )}
     </div>
   );
